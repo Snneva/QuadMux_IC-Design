@@ -125,20 +125,6 @@ QuadMux_IC-Design
 │   └── Laporan_PRT_Final_Project.pdf
 │
 ├── images
-│   ├── flowchart.png
-│   ├── inverter.png
-│   ├── transmission_gate.png
-│   ├── mux21.png
-│   ├── quad_mux.png
-│   ├── waveform.png
-│   ├── layout_inverter.png
-│   ├── layout_tg.png
-│   ├── layout_mux21.png
-│   ├── layout_quadmux.png
-│   ├── drc.png
-│   ├── lvs_mux21.png
-│   ├── lvs_quadmux.png
-│   └── postlayout_waveform.png
 │
 ├── mux_xschem
 │
