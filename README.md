@@ -160,7 +160,7 @@ QuadMux_IC-Design
 Inverter digunakan untuk menghasilkan sinyal komplemen (`SEL̅`) yang diperlukan oleh Transmission Gate.
 
 <p align="center">
-<img src="images/inverter.png" width="400">
+<img src="images/Inverter.JPG" width="400">
 </p>
 
 ---
@@ -170,7 +170,7 @@ Inverter digunakan untuk menghasilkan sinyal komplemen (`SEL̅`) yang diperlukan
 Transmission Gate terdiri atas pasangan transistor PMOS dan NMOS yang dikendalikan oleh sinyal SEL dan SEL̅.
 
 <p align="center">
-<img src="images/transmission_gate.png" width="400">
+<img src="images/Transistor_Gate.JPG" width="400">
 </p>
 
 ---
@@ -183,7 +183,7 @@ Multiplexer dibangun menggunakan:
 - 1 CMOS Inverter
 
 <p align="center">
-<img src="images/mux21.png" width="700">
+<img src="images/Mux_21/JPG" width="700">
 </p>
 
 ---
@@ -193,7 +193,7 @@ Multiplexer dibangun menggunakan:
 Empat buah Multiplexer 2-to-1 dihubungkan secara paralel membentuk Quad Multiplexer.
 
 <p align="center">
-<img src="images/quad_mux.png" width="700">
+<img src="images/Quad_Mux.JPG" width="700">
 </p>
 
 ---
@@ -214,7 +214,7 @@ Waveform menunjukkan:
 - SEL = 1 → Output mengikuti input B
 
 <p align="center">
-<img src="images/waveform.png" width="900">
+<img src="images/Simulasi.JPG" width="900">
 </p>
 
 ---
@@ -224,7 +224,7 @@ Waveform menunjukkan:
 ## Layout Inverter
 
 <p align="center">
-<img src="images/layout_inverter.png" width="250">
+<img src="images/Inverter.png" width="250">
 </p>
 
 ---
@@ -232,7 +232,7 @@ Waveform menunjukkan:
 ## Layout Transmission Gate
 
 <p align="center">
-<img src="images/layout_tg.png" width="250">
+<img src="images/transmission gate.png" width="250">
 </p>
 
 ---
@@ -240,7 +240,7 @@ Waveform menunjukkan:
 ## Layout Multiplexer 2-to-1
 
 <p align="center">
-<img src="images/layout_mux21.png" width="800">
+<img src="images/mux21_layout.png" width="800">
 </p>
 
 ---
@@ -248,7 +248,7 @@ Waveform menunjukkan:
 ## Layout Quad Multiplexer
 
 <p align="center">
-<img src="images/layout_quadmux.png" width="900">
+<img src="images/quadmux_layout.png" width="900">
 </p>
 
 ---
@@ -262,7 +262,7 @@ Hasil verifikasi menunjukkan bahwa seluruh layout telah memenuhi aturan fabrikas
 ✅ DRC CLEAN
 
 <p align="center">
-<img src="images/drc.png" width="700">
+<img src="images/DRC_Verif.png" width="700">
 </p>
 
 ---
@@ -274,13 +274,13 @@ Verifikasi menggunakan Netgen menunjukkan bahwa layout identik dengan skematik.
 ## MUX 2-to-1
 
 <p align="center">
-<img src="images/lvs_mux21.png" width="750">
+<img src="images/LVS_Mux21.png" width="750">
 </p>
 
 ## Quad Multiplexer
 
 <p align="center">
-<img src="images/lvs_quadmux.png" width="750">
+<img src="images/LVS_QuadMux21.png" width="750">
 </p>
 
 ✅ LVS MATCH
@@ -294,7 +294,7 @@ Setelah proses ekstraksi layout, simulasi kembali dilakukan menggunakan netlist 
 Hasil menunjukkan bahwa karakteristik keluaran tetap sama dengan simulasi skematik.
 
 <p align="center">
-<img src="images/postlayout_waveform.png" width="900">
+<img src="images/TestBench.png" width="900">
 </p>
 
 ---
