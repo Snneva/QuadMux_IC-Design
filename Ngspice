@@ -1,0 +1,75 @@
+* ==========================================
+* TESTBENCH SIMULASI QUAD MUX 2:1 (SKY130) - MATCH XSCHEM
+* ==========================================
+
+* 1. Memanggil Model Transistor PDK Sky130
+.lib /foss/pdks/sky130A/libs.tech/ngspice/sky130.lib.spice tt
+
+* ==========================================
+* 2. DEFINISI RANGKAIAN (Reference Netlist)
+* ==========================================
+.subckt inverter_cmos OUT IN VDD GND
+XM1 OUT IN VDD VDD sky130_fd_pr__pfet_01v8 L=0.15 W=0.5
+XM2 OUT IN GND GND sky130_fd_pr__nfet_01v8 L=0.15 W=0.5
+.ends
+
+.subckt tg IN S_bar OUT S VDD GND
+XM1 OUT S_bar IN VDD sky130_fd_pr__pfet_01v8 L=0.15 W=0.5
+XM2 OUT S IN GND sky130_fd_pr__nfet_01v8 L=0.15 W=0.5
+.ends
+
+.subckt mux21 A B Y SEL VDD GND
+X_INV net1 SEL VDD GND inverter_cmos
+X_TG0 A SEL Y net1 VDD GND tg
+X_TG1 B net1 Y SEL VDD GND tg
+.ends
+
+.subckt quad_mux21 A0 B0 Y0 A1 B1 Y1 A2 B2 Y2 A3 B3 Y3 SEL VDD GND
+X_INV_GLOBAL net1 SEL VDD GND inverter_cmos
+X_MUX0 A0 B0 Y0 net1 VDD GND mux21
+X_MUX1 A1 B1 Y1 net1 VDD GND mux21
+X_MUX2 A2 B2 Y2 net1 VDD GND mux21
+X_MUX3 A3 B3 Y3 net1 VDD GND mux21
+.ends
+
+* ==========================================
+* 3. INSTANSIASI DEVICE UNDER TEST (DUT)
+* ==========================================
+X_DUT A0 B0 Y0 A1 B1 Y1 A2 B2 Y2 A3 B3 Y3 SEL VDD GND quad_mux21
+
+* ==========================================
+* 4. SUMBER TEGANGAN DAYA (1.8V)
+* ==========================================
+VDD VDD 0 1.8V
+
+* ==========================================
+* 5. SINYAL STIMULUS (INPUT GELOMBANG)
+* ==========================================
+* Sinyal Kontrol SEL: HIGH di 0-20us, LOW di 20-40us
+VSEL SEL 0 PULSE(1.8 0 0 0.1n 0.1n 20u 40u)
+
+* Sinyal Data A (A_SIG): Gelombang cepat dengan periode 4us
+VA0 A0 0 PULSE(1.8 0 0 0.1n 0.1n 2u 4u)
+VA1 A1 0 PULSE(1.8 0 0 0.1n 0.1n 2u 4u)
+VA2 A2 0 PULSE(1.8 0 0 0.1n 0.1n 2u 4u)
+VA3 A3 0 PULSE(1.8 0 0 0.1n 0.1n 2u 4u)
+
+* Sinyal Data B (B_SIG): Gelombang agak lambat dengan periode 6us
+VB0 B0 0 PULSE(0 1.8 0 0.1n 0.1n 3u 6u)
+VB1 B1 0 PULSE(0 1.8 0 0.1n 0.1n 3u 6u)
+VB2 B2 0 PULSE(0 1.8 0 0.1n 0.1n 3u 6u)
+VB3 B3 0 PULSE(0 1.8 0 0.1n 0.1n 3u 6u)
+
+* ==========================================
+* 6. PERINTAH SIMULASI TRANSIENT (Skala Mikrodetik)
+* ==========================================
+.tran 10n 40u
+
+* ==========================================
+* 7. PLOTTING GRAFIK
+* ==========================================
+.control
+run
+plot V(SEL)+8 V(A0)+6 V(B0)+4 V(Y0)+2 V(Y3)
+.endc
+.end
