@@ -1,0 +1,11 @@
+======== Inverter =========
+netgen -batch lvs "inverter_cmos.spice inverter_cmos" "inverter_schematic.spice inverter_cmos" /foss/pdks/sky130A/libs.tech/netgen/sky130A_setup.tcl
+
+======= TG =======
+netgen -batch lvs TG.spice /headless/.xschem/simulations/tg.spice /foss/pdks/sky130A/libs.tech/netgen/sky130A_setup.tcl comp_tg.out
+
+====== Mux 2:1 =======
+netgen -batch lvs "mux21_layout.spice mux21_layout" "mux21_reference.spice mux21" /foss/pdks/sky130A/libs.tech/netgen/sky130A_setup.tcl comp_mux21.out
+
+====== Quad Mux =======
+netgen -batch lvs quadmux21_layout.spice /headless/.xschem/simulations/quad_mux21.spice /foss/pdks/sky130A/libs.tech/netgen/sky130A_setup.tcl comp_quad.out
