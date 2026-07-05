@@ -116,7 +116,7 @@ Post Layout Simulation
 # Struktur Repository
 
 ```
-quadmux-sky130
+QuadMux_IC-Design
 │
 ├── README.md
 ├── LICENSE
