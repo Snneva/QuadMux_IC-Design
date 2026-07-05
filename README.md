@@ -274,13 +274,13 @@ Verifikasi menggunakan Netgen menunjukkan bahwa layout identik dengan skematik.
 ## MUX 2-to-1
 
 <p align="center">
-<img src="images/LVS_Mux21.png" width="750">
+<img src="images/LVS_Mux21.PNG" width="750">
 </p>
 
 ## Quad Multiplexer
 
 <p align="center">
-<img src="images/LVS_QuadMux21.png" width="750">
+<img src="images/LVS_QuadMux21.PNG" width="750">
 </p>
 
 ✅ LVS MATCH
