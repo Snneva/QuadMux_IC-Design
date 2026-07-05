@@ -183,7 +183,7 @@ Multiplexer dibangun menggunakan:
 - 1 CMOS Inverter
 
 <p align="center">
-<img src="images/Mux_21/JPG" width="700">
+<img src="images/Mux_21.JPG" width="700">
 </p>
 
 ---
