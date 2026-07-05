@@ -140,13 +140,13 @@ QuadMux_IC-Design
 │   ├── lvs_quadmux.png
 │   └── postlayout_waveform.png
 │
-├── xschem
+├── mux_xschem
 │
-├── ngspice
+├── Ngspice
 │
-├── magic
+├── mux_magic
 │
-├── netgen
+├── LVS netgen
 │
 └── scripts
 ```
