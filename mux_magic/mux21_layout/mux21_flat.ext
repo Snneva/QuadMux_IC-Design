@@ -1,0 +1,56 @@
+timestamp 1781427143
+version 8.3
+tech sky130A
+style ngspice()
+scale 1000 1 500000
+resistclasses 4400000 2200000 950000 3050000 120000 197000 114000 191000 120000 197000 114000 191000 48200 319800 2000000 48200 48200 12800 125 125 47 47 29 5
+parameters sky130_fd_pr__nfet_01v8 l=l w=w a1=as p1=ps a2=ad p2=pd
+parameters sky130_fd_pr__pfet_01v8 l=l w=w a1=as p1=ps a2=ad p2=pd
+port "B" 2 1890 171 1980 229 m1
+port "Y" 4 1020 -30 2100 30 m1
+port "A" 1 880 171 966 229 m1
+port "SEL" 3 -300 260 2200 320 m1
+port "VDD" 5 -300 360 2300 460 m1
+port "GND" 6 -300 -460 2300 -360 m1
+node "B" 429 71.5069 1890 171 m1 0 0 0 0 0 0 0 0 9500 390 9500 390 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 32208 1108 5220 296 0 0 0 0 0 0 0 0 0 0
+equiv "B" "X_TG1.IN"
+node "Y" 2069 326.888 1020 -30 m1 0 0 0 0 0 0 0 0 19000 780 19000 780 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 64416 2216 64800 2280 0 0 0 0 0 0 0 0 0 0
+equiv "Y" "X_TG0.OUT"
+equiv "Y" "X_TG1.OUT"
+node "A" 429 87.7295 880 171 m1 0 0 0 0 0 0 0 0 9500 390 9500 390 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 32208 1108 4988 288 0 0 0 0 0 0 0 0 0 0
+equiv "A" "X_TG0.IN"
+node "X_TG1.S_bar" 2022 2216.37 15 -260 ndif 0 0 0 0 0 0 0 0 9500 390 9500 390 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 31392 2040 0 0 40920 1636 181706 6234 0 0 0 0 0 0 0 0 0 0
+equiv "X_TG1.S_bar" "X_INV.Vout"
+equiv "X_TG1.S_bar" "X_TG0.S"
+node "SEL" 2643 1086.47 -300 260 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 65392 3750 0 0 24288 1132 189846 6494 0 0 0 0 0 0 0 0 0 0
+equiv "SEL" "X_INV.Vin"
+equiv "SEL" "X_TG0.S_bar"
+equiv "SEL" "X_TG1.S"
+node "VDD" 11235 3443.13 -300 360 m1 0 0 0 0 800400 6240 0 0 21168 1008 9500 390 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 156144 3848 260000 5400 0 0 0 0 0 0 0 0 0 0
+equiv "VDD" "X_INV.VDD"
+equiv "VDD" "X_TG0.VDD"
+equiv "VDD" "X_TG1.VDD"
+substrate "GND" 0 0 -300 -460 m1 0 0 0 0 0 0 0 0 9500 390 21168 1008 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 156144 3848 260000 5400 0 0 0 0 0 0 0 0 0 0
+equiv "GND" "X_INV.GND"
+equiv "GND" "X_TG0.GND"
+equiv "GND" "X_TG1.GND"
+cap "VDD" "A" 48.6161
+cap "X_TG1.S_bar" "B" 39.7938
+cap "X_TG1.S_bar" "A" 121.254
+cap "Y" "B" 215.855
+cap "A" "Y" 143.598
+cap "SEL" "B" 225.518
+cap "SEL" "A" 85.669
+cap "VDD" "X_TG1.S_bar" 293.575
+cap "VDD" "Y" 82.0428
+cap "VDD" "SEL" 1938.01
+cap "X_TG1.S_bar" "Y" 355.147
+cap "SEL" "X_TG1.S_bar" 273.326
+cap "SEL" "Y" 390.506
+cap "VDD" "B" 41.1296
+device msubckt sky130_fd_pr__nfet_01v8 1985 -260 1986 -259 l=30 w=100 "GND" "SEL" 60 0 "B" 100 9500,390 "Y" 100 9500,390
+device msubckt sky130_fd_pr__nfet_01v8 985 -260 986 -259 l=30 w=100 "GND" "X_TG1.S_bar" 60 0 "A" 100 9500,390 "Y" 100 9500,390
+device msubckt sky130_fd_pr__nfet_01v8 -15 -260 -14 -259 l=30 w=100 "GND" "SEL" 60 0 "GND" 100 9500,390 "X_TG1.S_bar" 100 9500,390
+device msubckt sky130_fd_pr__pfet_01v8 1985 160 1986 161 l=30 w=100 "VDD" "X_TG1.S_bar" 60 0 "B" 100 9500,390 "Y" 100 9500,390
+device msubckt sky130_fd_pr__pfet_01v8 985 160 986 161 l=30 w=100 "VDD" "SEL" 60 0 "A" 100 9500,390 "Y" 100 9500,390
+device msubckt sky130_fd_pr__pfet_01v8 -15 160 -14 161 l=30 w=100 "VDD" "SEL" 60 0 "VDD" 100 9500,390 "X_TG1.S_bar" 100 9500,390

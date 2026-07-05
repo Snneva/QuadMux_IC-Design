@@ -1,0 +1,28 @@
+* NGSPICE file created from quadmux21_layout.ext - technology: sky130A
+
+X0 X_MUX3/SEL SEL GND GND sky130_fd_pr__nfet_01v8 ad=0.2375 pd=1.95 as=0.2375 ps=1.95 w=0.5 l=0.15
+X1 X_MUX3/SEL SEL VDD VDD sky130_fd_pr__pfet_01v8 ad=0.2375 pd=1.95 as=0.2375 ps=1.95 w=0.5 l=0.15
+X2 X_MUX0/X_TG0/S X_MUX3/SEL GND GND sky130_fd_pr__nfet_01v8 ad=0.2375 pd=1.95 as=1.1875 ps=9.75 w=0.5 l=0.15
+X3 X_MUX0/X_TG0/S X_MUX3/SEL VDD VDD sky130_fd_pr__pfet_01v8 ad=0.2375 pd=1.95 as=1.1875 ps=9.75 w=0.5 l=0.15
+X4 Y0 X_MUX0/X_TG0/S A0 GND sky130_fd_pr__nfet_01v8 ad=0.2375 pd=1.95 as=0.2375 ps=1.95 w=0.5 l=0.15
+X5 Y0 X_MUX3/SEL A0 VDD sky130_fd_pr__pfet_01v8 ad=0.2375 pd=1.95 as=0.2375 ps=1.95 w=0.5 l=0.15
+X6 Y0 X_MUX3/SEL B0 GND sky130_fd_pr__nfet_01v8 ad=0.475 pd=3.9 as=0.2375 ps=1.95 w=0.5 l=0.15
+X7 Y0 X_MUX0/X_TG0/S B0 VDD sky130_fd_pr__pfet_01v8 ad=0.475 pd=3.9 as=0.2375 ps=1.95 w=0.5 l=0.15
+X8 X_MUX1/X_TG0/S X_MUX3/SEL GND GND sky130_fd_pr__nfet_01v8 ad=0.2375 pd=1.95 as=0 ps=0 w=0.5 l=0.15
+X9 X_MUX1/X_TG0/S X_MUX3/SEL VDD VDD sky130_fd_pr__pfet_01v8 ad=0.2375 pd=1.95 as=0 ps=0 w=0.5 l=0.15
+X10 Y1 X_MUX1/X_TG0/S A1 GND sky130_fd_pr__nfet_01v8 ad=0.475 pd=3.9 as=0.2375 ps=1.95 w=0.5 l=0.15
+X11 Y1 X_MUX3/SEL A1 VDD sky130_fd_pr__pfet_01v8 ad=0.475 pd=3.9 as=0.2375 ps=1.95 w=0.5 l=0.15
+X12 Y1 X_MUX3/SEL B1 GND sky130_fd_pr__nfet_01v8 ad=0 pd=0 as=0.2375 ps=1.95 w=0.5 l=0.15
+X13 Y1 X_MUX1/X_TG0/S B1 VDD sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0.2375 ps=1.95 w=0.5 l=0.15
+X14 X_MUX2/X_TG0/S X_MUX3/SEL GND GND sky130_fd_pr__nfet_01v8 ad=0.2375 pd=1.95 as=0 ps=0 w=0.5 l=0.15
+X15 X_MUX2/X_TG0/S X_MUX3/SEL VDD VDD sky130_fd_pr__pfet_01v8 ad=0.2375 pd=1.95 as=0 ps=0 w=0.5 l=0.15
+X16 Y2 X_MUX2/X_TG0/S A2 GND sky130_fd_pr__nfet_01v8 ad=0.475 pd=3.9 as=0.2375 ps=1.95 w=0.5 l=0.15
+X17 Y2 X_MUX3/SEL A2 VDD sky130_fd_pr__pfet_01v8 ad=0.475 pd=3.9 as=0.2375 ps=1.95 w=0.5 l=0.15
+X18 Y2 X_MUX3/SEL B2 GND sky130_fd_pr__nfet_01v8 ad=0 pd=0 as=0.2375 ps=1.95 w=0.5 l=0.15
+X19 Y2 X_MUX2/X_TG0/S B2 VDD sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0.2375 ps=1.95 w=0.5 l=0.15
+X20 X_MUX3/X_TG0/S X_MUX3/SEL GND GND sky130_fd_pr__nfet_01v8 ad=0.2375 pd=1.95 as=0 ps=0 w=0.5 l=0.15
+X21 X_MUX3/X_TG0/S X_MUX3/SEL VDD VDD sky130_fd_pr__pfet_01v8 ad=0.2375 pd=1.95 as=0 ps=0 w=0.5 l=0.15
+X22 Y3 X_MUX3/X_TG0/S A3 GND sky130_fd_pr__nfet_01v8 ad=0.475 pd=3.9 as=0.2375 ps=1.95 w=0.5 l=0.15
+X23 Y3 X_MUX3/SEL A3 VDD sky130_fd_pr__pfet_01v8 ad=0.475 pd=3.9 as=0.2375 ps=1.95 w=0.5 l=0.15
+X24 Y3 X_MUX3/SEL B3 GND sky130_fd_pr__nfet_01v8 ad=0 pd=0 as=0.2375 ps=1.95 w=0.5 l=0.15
+X25 Y3 X_MUX3/X_TG0/S B3 VDD sky130_fd_pr__pfet_01v8 ad=0 pd=0 as=0.2375 ps=1.95 w=0.5 l=0.15

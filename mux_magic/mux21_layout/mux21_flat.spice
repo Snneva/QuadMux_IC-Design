@@ -1,0 +1,11 @@
+* NGSPICE file created from mux21_flat.ext - technology: sky130A
+
+.subckt mux21_flat A B SEL Y VDD GND
+X0 X_TG1.S_bar SEL GND GND sky130_fd_pr__nfet_01v8 ad=0.2375 pd=1.95 as=0.2375 ps=1.95 w=0.5 l=0.15
+X1 Y SEL B GND sky130_fd_pr__nfet_01v8 ad=0.2375 pd=1.95 as=0.2375 ps=1.95 w=0.5 l=0.15
+X2 Y SEL A VDD sky130_fd_pr__pfet_01v8 ad=0.2375 pd=1.95 as=0.2375 ps=1.95 w=0.5 l=0.15
+X3 Y X_TG1.S_bar B VDD sky130_fd_pr__pfet_01v8 ad=0.2375 pd=1.95 as=0.2375 ps=1.95 w=0.5 l=0.15
+X4 Y X_TG1.S_bar A GND sky130_fd_pr__nfet_01v8 ad=0.2375 pd=1.95 as=0.2375 ps=1.95 w=0.5 l=0.15
+X5 X_TG1.S_bar SEL VDD VDD sky130_fd_pr__pfet_01v8 ad=0.2375 pd=1.95 as=0.2375 ps=1.95 w=0.5 l=0.15
+.ends
+

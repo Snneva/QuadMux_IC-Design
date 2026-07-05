@@ -1,0 +1,96 @@
+timestamp 1781426817
+version 8.3
+tech sky130A
+style ngspice()
+scale 1000 1 500000
+resistclasses 4400000 2200000 950000 3050000 120000 197000 114000 191000 120000 197000 114000 191000 48200 319800 2000000 48200 48200 12800 125 125 47 47 29 5
+use TG X_TG1 1 0 2000 0 1 0
+use TG X_TG0 1 0 1000 0 1 0
+use inverter_cmos X_INV 1 0 0 0 1 0
+port "GND" 6 -300 -460 2300 -360 m1
+port "Y" 4 1020 -30 2100 30 m1
+port "SEL" 3 -300 260 2200 320 m1
+port "B" 2 1890 171 1980 229 m1
+port "A" 1 880 171 966 229 m1
+port "VDD" 5 -300 360 2300 460 m1
+node "GND" 130 882.714 -300 -460 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3468 408 260000 5400 0 0 0 0 0 0 0 0 0 0
+node "Y" 77 234.024 1020 -30 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2312 272 64800 2280 0 0 0 0 0 0 0 0 0 0
+node "li_50_n17#" 133 710.537 50 -17 v0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3468 408 181706 6234 0 0 0 0 0 0 0 0 0 0
+node "SEL" 117 758.57 -300 260 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 17888 876 189846 6494 0 0 0 0 0 0 0 0 0 0
+node "B" 13 47.0482 1890 171 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1156 136 5220 296 0 0 0 0 0 0 0 0 0 0
+node "A" 13 51.9238 880 171 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1156 136 4988 288 0 0 0 0 0 0 0 0 0 0
+node "VDD" 130 850.521 -300 360 m1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3468 408 260000 5400 0 0 0 0 0 0 0 0 0 0
+substrate "VSUBS" 0 0 -1073741817 -1073741817 space 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+cap "B" "SEL" 82.8572
+cap "li_50_n17#" "Y" 203.721
+cap "Y" "GND" 0.411619
+cap "SEL" "li_50_n17#" 127.581
+cap "SEL" "GND" 26.8805
+cap "A" "SEL" 62.3508
+cap "VDD" "B" 0.76451
+cap "VDD" "li_50_n17#" 2.01218
+cap "VDD" "GND" 6.8156
+cap "VDD" "A" 0.76451
+cap "B" "li_50_n17#" 0.0855835
+cap "B" "GND" 0.0921396
+cap "A" "B" 0.887256
+cap "SEL" "Y" 250.75
+cap "li_50_n17#" "GND" 1081.51
+cap "A" "li_50_n17#" 7.95253
+cap "A" "GND" 0.0921396
+cap "VDD" "Y" 0.411619
+cap "VDD" "SEL" 1231.78
+cap "B" "Y" 21.2203
+cap "X_TG1/S_bar" "X_TG1/OUT" 17.3217
+cap "X_TG1/S" "X_TG1/VDD" 206.303
+cap "X_TG1/VDD" "X_TG0/IN" 7.46674
+cap "X_TG1/S_bar" "X_TG1/IN" 0.331021
+cap "X_TG1/S_bar" "X_TG1/GND" 44.6649
+cap "X_TG1/OUT" "X_TG1/GND" -0.0906339
+cap "X_TG1/S_bar" "X_TG1/S" 50.7949
+cap "X_TG1/S_bar" "X_TG0/IN" 57.3275
+cap "X_TG1/OUT" "X_TG1/S" 13.597
+cap "X_TG1/OUT" "X_TG0/IN" 9.47243
+cap "X_TG1/S" "X_TG1/IN" 0.0309074
+cap "X_TG1/S" "X_TG1/GND" 5.31593
+cap "X_TG1/IN" "X_TG0/IN" -0.445453
+cap "X_TG0/IN" "X_TG1/GND" -0.0173787
+cap "X_TG1/S_bar" "X_TG1/VDD" 14.5809
+cap "X_TG1/OUT" "X_TG1/VDD" 0.216974
+cap "X_TG1/S" "X_TG0/IN" 7.28916
+cap "X_TG1/VDD" "X_TG1/GND" 4.04054
+cap "X_TG1/IN" "X_TG0/IN" -0.441802
+cap "X_TG0/IN" "X_TG1/S_bar" 0.288841
+cap "X_TG1/S" "X_TG1/OUT" 58.2763
+cap "X_TG1/GND" "X_TG1/S" -3.08108
+cap "X_TG1/S" "X_TG1/IN" 86.9452
+cap "X_TG1/S" "X_TG1/S_bar" 37.5395
+cap "X_TG1/VDD" "X_TG1/S" 139.149
+cap "X_TG1/GND" "X_TG1/OUT" 0.969405
+cap "X_TG1/IN" "X_TG1/OUT" 60.5086
+cap "X_TG1/VDD" "X_TG1/OUT" 17.9251
+cap "X_TG1/S_bar" "X_TG1/OUT" 66.2224
+cap "X_TG1/S" "X_TG0/IN" 3.83163
+cap "X_TG1/GND" "X_TG1/IN" -0.0501276
+cap "X_TG1/GND" "X_TG1/VDD" 1.91842
+cap "X_TG1/GND" "X_TG1/S_bar" 30.0642
+cap "X_TG1/VDD" "X_TG1/IN" -0.0196858
+cap "X_TG1/IN" "X_TG1/S_bar" 27.1797
+cap "X_TG1/VDD" "X_TG1/S_bar" 6.40469
+merge "X_INV/GND" "X_TG0/GND" -202.631 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -3468 -408 0 0 0 0 0 0 0 0 0 0 0 0
+merge "X_TG0/GND" "X_TG1/GND"
+merge "X_TG1/GND" "VSUBS"
+merge "VSUBS" "GND"
+merge "X_INV/Vin" "X_TG0/S_bar" -456.749 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -6668 -536 0 0 0 0 0 0 0 0 0 0 0 0
+merge "X_TG0/S_bar" "X_TG1/S"
+merge "X_TG1/S" "SEL"
+merge "X_INV/Vout" "X_TG0/S" -228.07 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -3468 -408 0 0 0 0 0 0 0 0 0 0 0 0
+merge "X_TG0/S" "X_TG1/S_bar"
+merge "X_TG1/S_bar" "li_50_n17#"
+merge "X_INV/VDD" "X_TG0/VDD" -272.387 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -3468 -408 0 0 0 0 0 0 0 0 0 0 0 0
+merge "X_TG0/VDD" "X_TG1/VDD"
+merge "X_TG1/VDD" "VDD"
+merge "X_TG0/OUT" "X_TG1/OUT" -133.026 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -2312 -272 0 0 0 0 0 0 0 0 0 0 0 0
+merge "X_TG1/OUT" "Y"
+merge "X_TG0/IN" "A" -67.9288 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1156 -136 0 0 0 0 0 0 0 0 0 0 0 0
+merge "X_TG1/IN" "B" -79.2431 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 -1156 -136 0 0 0 0 0 0 0 0 0 0 0 0

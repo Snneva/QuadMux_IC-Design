@@ -1,0 +1,19 @@
+* Reference Flat Schematic Netlist untuk MUX 2:1
+
+.subckt mux21 A B Y SEL VDD GND
+
+* --- Inverter (Menghasilkan sinyal net1) ---
+XM1_inv net1 SEL VDD VDD sky130_fd_pr__pfet_01v8 L=0.15 W=0.5
+XM2_inv net1 SEL GND GND sky130_fd_pr__nfet_01v8 L=0.15 W=0.5
+
+* --- TG0 (Meneruskan A ke Y saat SEL = 0) ---
+* PMOS dikendalikan SEL, NMOS dikendalikan net1
+XM1_tg0 Y SEL A VDD sky130_fd_pr__pfet_01v8 L=0.15 W=0.5
+XM2_tg0 Y net1 A GND sky130_fd_pr__nfet_01v8 L=0.15 W=0.5
+
+* --- TG1 (Meneruskan B ke Y saat SEL = 1) ---
+* PMOS dikendalikan net1, NMOS dikendalikan SEL
+XM1_tg1 Y net1 B VDD sky130_fd_pr__pfet_01v8 L=0.15 W=0.5
+XM2_tg1 Y SEL B GND sky130_fd_pr__nfet_01v8 L=0.15 W=0.5
+
+.ends

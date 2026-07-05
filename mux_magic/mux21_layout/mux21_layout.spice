@@ -1,0 +1,18 @@
+* NGSPICE file created from mux21_layout.ext - technology: sky130A
+
+.subckt inverter_cmos Vin Vout VDD GND
+X0 Vout Vin GND GND sky130_fd_pr__nfet_01v8 ad=0.2375 pd=1.95 as=0.2375 ps=1.95 w=0.5 l=0.15
+X1 Vout Vin VDD VDD sky130_fd_pr__pfet_01v8 ad=0.2375 pd=1.95 as=0.2375 ps=1.95 w=0.5 l=0.15
+.ends
+
+.subckt TG IN OUT S_bar S VDD GND
+X0 OUT S IN GND sky130_fd_pr__nfet_01v8 ad=0.2375 pd=1.95 as=0.2375 ps=1.95 w=0.5 l=0.15
+X1 OUT S_bar IN VDD sky130_fd_pr__pfet_01v8 ad=0.2375 pd=1.95 as=0.2375 ps=1.95 w=0.5 l=0.15
+.ends
+
+.subckt mux21_layout A B SEL Y VDD GND
+XX_INV SEL X_TG0/S VDD GND inverter_cmos
+XX_TG0 A Y SEL X_TG0/S VDD GND TG
+XX_TG1 B Y X_TG0/S SEL VDD GND TG
+.ends
+

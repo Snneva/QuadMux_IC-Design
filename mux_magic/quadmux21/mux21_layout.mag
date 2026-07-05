@@ -1,0 +1,104 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1781426817
+<< locali >>
+rect 1796 107 1862 123
+rect 1796 73 1812 107
+rect 1846 73 1862 107
+rect 1796 -113 1862 73
+<< viali >>
+rect -196 393 -162 427
+rect 804 393 838 427
+rect 1804 393 1838 427
+rect 916 183 950 217
+rect 1916 183 1950 217
+rect 1154 73 1188 107
+rect 1812 73 1846 107
+rect -170 -17 -136 17
+rect 50 -17 84 17
+rect 1050 -17 1084 17
+rect 812 -107 846 -73
+rect 2154 63 2188 97
+rect 2050 -17 2084 17
+rect -196 -427 -162 -393
+rect 804 -427 838 -393
+rect 1804 -427 1838 -393
+<< metal1 >>
+rect -300 427 2300 460
+rect -300 393 -196 427
+rect -162 393 804 427
+rect 838 393 1804 427
+rect 1838 393 2300 427
+rect -300 360 2300 393
+rect -300 260 2200 320
+rect -182 17 -124 260
+rect 880 217 966 229
+rect 880 183 916 217
+rect 950 183 966 217
+rect 880 171 966 183
+rect 1142 107 1200 260
+rect 1142 73 1154 107
+rect 1188 73 1200 107
+rect 1142 61 1200 73
+rect 1800 107 1858 260
+rect 1890 217 1980 229
+rect 1890 183 1916 217
+rect 1950 183 1980 217
+rect 1890 171 1980 183
+rect 1800 73 1812 107
+rect 1846 73 1858 107
+rect 1800 61 1858 73
+rect 2142 97 2200 109
+rect 2142 63 2154 97
+rect 2188 63 2200 97
+rect -182 -17 -170 17
+rect -136 -17 -124 17
+rect -182 -29 -124 -17
+rect 38 17 96 29
+rect 38 -17 50 17
+rect 84 -17 96 17
+rect 38 -260 96 -17
+rect 1020 17 2100 30
+rect 1020 -17 1050 17
+rect 1084 -17 2050 17
+rect 2084 -17 2100 17
+rect 1020 -30 2100 -17
+rect 800 -73 858 -61
+rect 800 -107 812 -73
+rect 846 -107 858 -73
+rect 800 -260 858 -107
+rect 2142 -260 2200 63
+rect 0 -320 2200 -260
+rect -300 -393 2300 -360
+rect -300 -427 -196 -393
+rect -162 -427 804 -393
+rect 838 -427 1804 -393
+rect 1838 -427 2300 -393
+rect -300 -460 2300 -427
+use inverter_cmos  X_INV
+timestamp 1781412281
+transform 1 0 0 0 1 0
+box -320 -460 260 520
+use TG  X_TG0
+timestamp 1781409495
+transform 1 0 1000 0 1 0
+box -320 -460 260 520
+use TG  X_TG1
+timestamp 1781409495
+transform 1 0 2000 0 1 0
+box -320 -460 260 520
+<< labels >>
+flabel metal1 -300 360 2300 460 0 FreeSans 320 0 0 0 VDD
+port 5 nsew
+flabel metal1 -300 -460 2300 -360 0 FreeSans 320 0 0 0 GND
+port 6 nsew
+flabel metal1 -300 260 2200 320 0 FreeSans 320 0 0 0 SEL
+port 3 nsew
+flabel metal1 880 171 966 229 0 FreeSans 320 0 0 0 A
+port 1 nsew
+flabel metal1 1890 171 1980 229 0 FreeSans 320 0 0 0 B
+port 2 nsew
+flabel metal1 1020 -30 2100 30 0 FreeSans 320 0 0 0 Y
+port 4 nsew
+<< end >>

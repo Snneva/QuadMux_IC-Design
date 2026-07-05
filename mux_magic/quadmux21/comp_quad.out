@@ -1,0 +1,29 @@
+
+Circuit 1 cell sky130_fd_pr__pfet_01v8 and Circuit 2 cell sky130_fd_pr__pfet_01v8 are black boxes.
+Equate elements:  no current cell.
+Device classes sky130_fd_pr__pfet_01v8 and sky130_fd_pr__pfet_01v8 are equivalent.
+
+Circuit 1 cell sky130_fd_pr__nfet_01v8 and Circuit 2 cell sky130_fd_pr__nfet_01v8 are black boxes.
+Equate elements:  no current cell.
+Device classes sky130_fd_pr__nfet_01v8 and sky130_fd_pr__nfet_01v8 are equivalent.
+Flattening unmatched subcell mux21 in circuit /headless/.xschem/simulations/quad_mux21.spice (1)(4 instances)
+Flattening unmatched subcell inverter in circuit /headless/.xschem/simulations/quad_mux21.spice (1)(5 instances)
+Flattening unmatched subcell tg in circuit /headless/.xschem/simulations/quad_mux21.spice (1)(8 instances)
+
+Subcircuit summary:
+Circuit 1: quadmux21_layout.spice          |Circuit 2: /headless/.xschem/simulations/q 
+-------------------------------------------|-------------------------------------------
+sky130_fd_pr__nfet_01v8 (13)               |sky130_fd_pr__nfet_01v8 (13)               
+sky130_fd_pr__pfet_01v8 (13)               |sky130_fd_pr__pfet_01v8 (13)               
+Number of devices: 26                      |Number of devices: 26                      
+Number of nets: 20                         |Number of nets: 20                         
+---------------------------------------------------------------------------------------
+Resolving symmetries by property value.
+Resolving symmetries by pin name.
+Resolving symmetries by net name.
+Netlists match with 10 symmetries.
+Cells have no pins;  pin matching not needed.
+Device classes quadmux21_layout.spice and /headless/.xschem/simulations/quad_mux21.spice are equivalent.
+
+Final result: Circuits match uniquely.
+.

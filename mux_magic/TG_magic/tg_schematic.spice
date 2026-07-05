@@ -1,0 +1,5 @@
+* Reference Schematic Netlist untuk CMOS Transmission Gate (TG)
+.subckt TG IN OUT S_bar S VDD GND
+XM1 OUT S_bar IN VDD sky130_fd_pr__pfet_01v8 L=0.15 W=0.5
+XM2 OUT S IN GND sky130_fd_pr__nfet_01v8 L=0.15 W=0.5
+.ends
