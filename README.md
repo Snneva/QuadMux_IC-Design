@@ -198,6 +198,14 @@ Empat buah Multiplexer 2-to-1 dihubungkan secara paralel membentuk Quad Multiple
 
 ---
 
+## 5 Test Bench 
+
+Sarana Test Bench di Xschem
+
+<p align="center">
+<img src="images/TestBench.JPG" width="700">
+</p>
+
 # Simulasi NGSPICE
 
 Simulasi dilakukan menggunakan:
